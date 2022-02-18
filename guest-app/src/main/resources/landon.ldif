@@ -1,0 +1,51 @@
+dn: dc=frankmoley,dc=com
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: frankmoley
+o: FrankMoley
+
+dn: ou=people,dc=frankmoley,dc=com
+objectclass: top
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=frankmoley,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: groups
+
+dn: uid=fpmoles,ou=people,dc=frankmoley,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Frank Moley
+sn: Moley
+givenName: Frank
+mail: fpmoles@frankmoley.com
+uid: fpmoles
+userPassword: {SSHA}jSKgzh06oH6os0/yFC1hLC+5hCA57R4/24rUZg==
+
+dn: uid=jdoe,ou=people,dc=frankmoley,dc=com
+objectClass: inetOrgPerson
+cn: John Doe
+sn: Doe
+givenName: John
+mail: jdoe@frankmoley.com
+uid: jdoe
+userPassword: {SSHA}HdqUtjBxS0mFwHtQhvG/gNx4wgtxloC2jvtC9Q==
+
+dn: cn=admin,ou=groups,dc=frankmoley,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: admins
+uniqueMember: uid=fpmoles,ou=people,dc=frankmoley,dc=com
+
+dn: cn=user,ou=groups,dc=frankmoley,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: users
+uniqueMember: uid=fpmoles,ou=people,dc=frankmoley,dc=com
+uniqueMember: uid=jdoe,ou=people,dc=frankmoley,dc=com
+
