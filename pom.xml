@@ -23,6 +23,7 @@
     <modules>
         <module>guest-app</module>
         <module>guest-services</module>
+        <module>hello-service</module>
     </modules>
 
     <dependencyManagement>
